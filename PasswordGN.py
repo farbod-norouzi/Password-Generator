@@ -4,15 +4,13 @@ import os
 from os import system
 import platform 
 import sys
+import datetime
+import random
 try:
-    import datetime
-    import random
     from tqdm import tqdm
     from colorama import Fore 
 except:
     print("Installing prerequisites")
-    system("pip install datetime")
-    system("pip install random")
     system("pip install tqdm")
     system("pip install colorama")
     exit('\n',"Run script Again")
@@ -50,7 +48,7 @@ except:
     sys.exit()
 
 # Start (Progress bar)
-
+finish = "\n \n Keep Safe it! \n"
 print("Please Wait...",'\n')
 
 for i in tqdm(range(pass_range)):
@@ -67,7 +65,7 @@ if pass_range >= 8:
     for i in range(pass_range):
         i = random.choice(alefba)
         print(i, end= '')
-        
+    print(finish)     
 else:
     print('You Can Not Choice >8 Number !')
 
